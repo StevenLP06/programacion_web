@@ -13,6 +13,15 @@ class AuthorController extends Controller
         return view('authors.authorCrud')->with('authors',$authors);
     }
 
+    public function store(Request $request)
+    {
+        $author = new Author;
+        $author->name = $request->nombreAutor;
+        $author->email = $request->correo;
+        $author->birth_day = $request->fechaNacimiento;
+        $author->save();
+        return redirect()->route('authors.index');
+    }
     //Se hace la petición para modificar encontrando al 
     //Autor que se quiere modificar.
     public function edit($id)

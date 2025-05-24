@@ -13,6 +13,7 @@ Route::delete('/books/{id}',[BookController::class,'destroy'])->name('books.dest
 
 //Rutas de Autores
 Route::get('/authors',[AuthorController::class,'index'])->name('authors.index');
+Route::post('/authors',[AuthorController::class,'store'])->name('authors.store');
 Route::get('/authors/{id}',[AuthorController::class,'edit'])->name('authors.edit');
 Route::put('authors/{id}',[AuthorController::class,'update'])->name('authors.update');
 Route::delete('/auhtors/{id}',[AuthorController::class,'destroy'])->name('authors.destroy');

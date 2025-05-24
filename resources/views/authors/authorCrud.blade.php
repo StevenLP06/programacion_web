@@ -8,16 +8,19 @@
   </head>
   <body>
     <div class="container">
-<!--       <form action="{{route('books.store')}}" method="post">
+      <form action="{{route('authors.store')}}" method="post">
         @csrf
-        <label for="title">Ingrese el titulo del libro
-          <input type="text" name="titulo" id="title">
+        <label for="name">Ingrese el nombre del autor
+          <input type="text" name="nombreAutor" id="name">
         </label>
-        <label for="price">Ingrese el precio del libro
-          <input type="number" name="precio" id="price">
+        <label for="email">Ingrese el correo electrónico del autor
+          <input type="email" name="correo" id="email">
+        </label>
+        <label for="birth_day">Ingrese la fecha de nacimiento del autor
+          <input type="date" name="fechaNacimiento" id="birth_day">
         </label>
         <button type="submit" class="btn btn-success">Guardar</button>
-      </form> -->
+      </form>
         <table class="table">
             <thead>
               <tr>
