@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="" method="post">
+      <form action="{{route('books.store')}}" method="post">
         @csrf
         <label for="title">Ingrese el titulo del libro
           <input type="text" name="titulo" id="title">
