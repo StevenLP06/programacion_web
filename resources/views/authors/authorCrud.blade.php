@@ -36,7 +36,7 @@
                 <td>{{$author->email}}</td>
                 <td>{{$author->birth_day}}</td>
                 <td>
-                  <!-- <a href="{{route('books.edit',$author->id)}}" class="btn btn-warning">Editar</a> -->
+                  <a href="{{route('authors.edit',$author->id)}}" class="btn btn-warning">Editar</a>
                   <form action="{{route('authors.destroy',$author->id)}}" method="post">
                     @method('delete')
                     @csrf
