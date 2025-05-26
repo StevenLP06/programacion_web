@@ -17,3 +17,9 @@ Route::post('/authors',[AuthorController::class,'store'])->name('authors.store')
 Route::get('/authors/{id}',[AuthorController::class,'edit'])->name('authors.edit');
 Route::put('authors/{id}',[AuthorController::class,'update'])->name('authors.update');
 Route::delete('/auhtors/{id}',[AuthorController::class,'destroy'])->name('authors.destroy');
+
+
+#Crea el sistema de rutas para Login, Registro...
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

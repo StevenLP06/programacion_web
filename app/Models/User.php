@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    #Con este metodo se define la relacion con la cardinalidad del usuario con los Roles 
+    #(En este caso especifico es de 1 a 1)
+    
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
