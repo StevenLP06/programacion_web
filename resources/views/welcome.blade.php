@@ -23,6 +23,7 @@
               <tr>
                 <th scoope="col">#</th>
                 <th scoope="col">Titulo</th>
+                <th scoope="col">Autor</th>
                 <th scoope="col">Precio</th>
                 <th scoope="col">Opciones</th>
               </tr>
@@ -32,6 +33,7 @@
               <tr>
                 <td>{{$book->id}}</td>
                 <td>{{$book->title}}</td>
+                <td>{{$book->author->name ?? 'Autor no encontrado'}}</td>
                 <td>{{$book->price}}</td>
                 <td>
                   <a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">Editar</a>

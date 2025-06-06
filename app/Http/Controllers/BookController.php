@@ -14,8 +14,11 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
-        return view('welcome')->with('books',$books);
+        /* $books = Book::all();
+        return view('welcome')->with('books',$books); */
+        $books = Book::with('author')->get();
+        return view('welcome')->with('books',$books); 
+
     }
 
     /**

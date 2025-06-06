@@ -16,7 +16,7 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author');
+            // $table->string('author');
             # unsignedBigInteger crea un campo de tipo entero grande sin signo (solo positivos)
             # que se usará como llave foránea, para relacionarlo con la tabla authors
             $table->unsignedBigInteger('author_id');
