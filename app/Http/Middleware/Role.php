@@ -21,7 +21,7 @@ class Role
         $roles = explode('|',$roles);
         #Que usuario esta iniciando sesion
         $user = Auth::user();
-        #Comparar si el usuario que esta inicando sesion tiene el rol de los roles que hay en la bs¿d
+        #Comparar si el usuario que esta inicando sesion tiene el rol de los roles que hay en la bd
         if(!$user || !$user->role || !in_array($user->role->label, $roles))
         {
             return abort(403, "No tiene el rol necesario. ");
